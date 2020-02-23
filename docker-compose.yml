@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+  bookmedikphp:
+    container_name: bookmediktarea2
+    image: php:7.4.3-apache
+    restart: always
+    environment:
+      MARIADB_USER: bookmedik
+      MARIADB_PASS: bookmedik
+      MARIADB_HOST: servidor_mysqltarea2
+    ports:
+      - 80:80
+    volumes:
+      - /opt/logs_apache2:/var/log/apache2
+      - ./script.sh:/usr/local/bin/script.sh
+      - ./bookmedik:/var/www/html
+    command: >
+      bash /usr/local/bin/script.sh
+  servidor_mysql2:
+    container_name: servidor_mysqltarea2
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: bookmedik
+      MYSQL_USER: bookmedik
+      MYSQL_PASSWORD: bookmedik
+      MYSQL_ROOT_PASSWORD: asdasd
+    volumes:
+      - /opt/bbdd_mariadb:/var/lib/mysql
