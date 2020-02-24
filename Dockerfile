@@ -1,7 +1,7 @@
 FROM php:7.4.3-apache
 ENV MARIADB_USER bookmedik
 ENV MARIADB_PASS bookmedik
-ENV MARIADB_HOST servidor_mysqltarea2
+ENV MARIADB_HOST mysqlt2
 RUN docker-php-ext-install pdo pdo_mysql mysqli json
 RUN a2enmod rewrite
 EXPOSE 80
