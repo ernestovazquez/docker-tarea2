@@ -8,5 +8,9 @@ EXPOSE 80
 WORKDIR /var/www/html
 COPY ./bookmedik /var/www/html
 ADD script.sh /usr/local/bin/script.sh
+
 RUN chmod +x /usr/local/bin/script.sh
+
 CMD ["/usr/local/bin/script.sh"]
+
+

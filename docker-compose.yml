@@ -27,4 +27,4 @@ services:
       MYSQL_PASSWORD: bookmedik
       MYSQL_ROOT_PASSWORD: asdasd
     volumes:
-      - /opt/mariat2:/var/lib/mysql
+      - /opt/bbdd_mariadb:/var/lib/mysql
