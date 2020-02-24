@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
-  bookmedikphp:
+  bookmediktarea2:
     container_name: bookmediktarea2
     image: php:7.4.3-apache
     restart: always
@@ -17,7 +17,7 @@ services:
       - ./bookmedik:/var/www/html
     command: >
       bash /usr/local/bin/script.sh
-  servidor_mysql2:
+  servidor_mysqltarea2:
     container_name: servidor_mysqltarea2
     image: mariadb
     restart: always
